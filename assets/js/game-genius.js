@@ -101,7 +101,8 @@ function recebeComparaSequenciaJogador(evento) {
             }, 1000);
         } else {
             if (nivel > recordeRAM) {
-                recordePagina.innerText = nivel;
+                recordeRAM = nivel
+                recordePagina.innerText = recordeRAM;
             }
             painelErrou();
             resetSequencias(resultJogador);
