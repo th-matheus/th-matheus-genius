@@ -1,0 +1,99 @@
+#bloco-placar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 15rem;
+    height: 35rem;
+}
+
+.titulo-recorde {
+    color: #fff;
+    text-align: center;
+    font-size: 20pt;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+}
+
+#fundo-recorde {
+    background-color: #fff;
+    width: 8rem;
+    height: 4rem;
+    margin: auto;
+    border-radius: 1.5rem;
+    text-align: center;
+    line-height: 4rem;
+}
+
+#recorde {
+    font-size: 40pt;
+    color: #000;
+    font-weight: bold;
+}
+
+.titulo-pontuacao-atual {
+    margin-top: 1.5rem;
+    color: #fff;
+    text-align: center;
+    font-size: 20pt;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+}
+
+#fundo-pontuacao-atual {
+    background-color: #fff;
+    width: 8rem;
+    height: 4rem;
+    margin: auto;
+    border-radius: 1.5rem;
+    text-align: center;
+    line-height: 4rem;
+}
+
+#pontuacao-atual {
+    font-size: 40pt;
+    color: #000;
+    font-weight: bold;
+}
+
+#feito-por {
+    font-size: 25pt;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+}
+
+.nome-dev {
+    text-align: center;
+    font-size: 14pt;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+}
+
+.matheus {
+    color: #ffff00;
+}
+
+.herbert {
+    color: #008000;
+}
+
+#container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-social {
+    height: 2rem;
+}
+
+.img-social:hover {
+    height: 2.3rem;
+    transition: height 2s;
+}
+
+.link-social {
+    margin: 0 0.5rem 1rem;
+}

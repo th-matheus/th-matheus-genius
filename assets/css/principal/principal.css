@@ -1,0 +1,207 @@
+#bloco-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45rem;
+    height: 35rem;
+}
+
+#container-genius{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    width: 31rem;
+    height: 31rem;
+    border-radius: 3rem;
+}
+
+#container-botao-cores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 28rem;
+    height: 28rem;
+}
+
+.botao-genius {
+    width: 13rem;
+    height: 13rem;
+}
+
+.botao-genius:active {
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+#verde {
+    background-color: #006d00;
+    margin: 0 0.5rem 0.5rem 0;
+    border-top-left-radius: 2rem;
+}
+
+#verde:active {
+    background-color: #35ec35;
+    box-shadow: 0px 0px 15px 5px #aeffbbcc;
+    -webkit-box-shadow: 0px 0px 15px 5px #aeffbbcc;
+    -moz-box-shadow: 0px 0px 15px 5px #aeffbbcc;
+}
+
+#vermelho {
+    background-color: #990707;
+    margin: 0 0 0.5rem 0.5rem;
+    border-top-right-radius: 2rem;
+}
+
+#vermelho:active {
+    background-color: #ff0000;
+    box-shadow: 0px 0px 15px 5px #ffaeaecc;
+    -webkit-box-shadow: 0px 0px 15px 5px #ffaeaecc;
+    -moz-box-shadow: 0px 0px 15px 5px #ffaeaecc;
+}
+
+#amarelo {
+    background-color: #757500;
+    margin: 0.5rem 0.5rem 0 0;
+    border-bottom-left-radius: 2rem;
+}
+
+#amarelo:active {
+    background-color: #ffff00;
+    box-shadow: 0px 0px 15px 5px #fffcaecc;
+    -webkit-box-shadow: 0px 0px 15px 5px #fffcaecc;
+    -moz-box-shadow: 0px 0px 15px 5px #fffcaecc;
+}
+
+#azul {
+    background-color: #020269;
+    margin: 0.5rem 0 0 0.5rem;
+    border-bottom-right-radius: 2rem;
+}
+
+#azul:active {
+    background-color: #0000ff;
+    box-shadow: 0px 0px 15px 5px #5454fc;
+    -webkit-box-shadow: 0px 0px 15px 5px #5454fc;
+    -moz-box-shadow: 0px 0px 15px 5px #5454fc;
+}
+
+#bloco-centro-genius {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    border: 1rem solid #000;
+}
+
+#botao-jogar {
+    width: 12rem;
+    height: 4rem;
+    font-size: 25pt;
+    font-weight: bold;
+    border-radius: 2rem;
+    background-color: #999;
+    color: #fff;
+    transition: background-color 5s;
+}
+
+#botao-jogar:hover {
+    background-color: #3b3b3b;
+    transition: background-color 5s;
+}
+
+#botao-jogar:active {
+    width: 11.5rem;
+    height: 3.5rem;
+    font-size: 23pt;
+}
+
+.atencao {
+    font-size: 26pt;
+    font-weight: bold;
+}
+
+.sua-vez {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.acertou {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.errou {
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+.titulo-pontos {
+    font-size: 16pt;
+    font-weight: 600;
+}
+
+.pontos-rodada {
+    font-size: 50pt;
+    font-weight: 700;
+}
+.botao-jogar-novamente {
+    width: 12rem;
+    height: 4rem;
+    font-size: 12pt;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    background-color: #999;
+    color: #fff;
+    transition: background-color 2s;
+}
+
+.botao-jogar-novamente:hover {
+    background-color: #3b3b3b;
+    transition: background-color 5s;
+}
+
+.botao-jogar-novamente:active {
+    width: 13.5rem;
+    height: 3.5rem;
+    font-size: 11pt;
+}
+
+#reset {
+    width: 5rem;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+    font-size: 12pt;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    background-color: #3b3b3b;
+    color: #fff;
+    transition: background-color 2s;
+}
+
+#reset:hover {
+    background-color: #9e2525;
+    transition: background-color 5s;
+}
+
+#reset:active {
+    width: 4.8rem;
+    height: 1.3rem;
+    font-size: 11pt;
+}
+
+.selected {
+    box-shadow: 0px 0px 15px 5px #ffffffcc;
+    -webkit-box-shadow: 0px 0px 15px 5px #ffffffcc;
+    -moz-box-shadow: 0px 0px 15px 5px #ffffffcc;
+    filter: brightness(200%);
+    -webkit-filter: brightness(200%);
+    -moz-filter: brightness(200%);
+}

@@ -1,0 +1,19 @@
+#bloco-instrucoes {
+    width: 15rem;
+    height: 35rem;
+}
+
+.titulo-instrucoes {
+    color: #fff;
+    font-size: 22pt;
+    text-align: center;
+    margin-top: 10%;
+    white-space: nowrap;
+}
+
+.paragrafo-instrucoes {
+    color: #fff;
+    font-size: 12pt;
+    text-align: center;
+    margin: 1rem auto;
+}

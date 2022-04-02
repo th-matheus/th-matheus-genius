@@ -1,0 +1,6 @@
+#container-principal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 35rem;
+}
