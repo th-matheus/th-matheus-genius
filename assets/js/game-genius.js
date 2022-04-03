@@ -82,6 +82,20 @@ function reiniciaGenius(evento) {
     }
 }
 
+function desabilitarBotoes() {
+    botaoVerde.disabled = true;
+    botaoVermelho.disabled = true;
+    botaoAmarelo.disabled = true;
+    botaoAzul.disabled = true;
+};
+
+function habilitarBotoes() {
+    botaoVerde.disabled = false;
+    botaoVermelho.disabled = false;
+    botaoAmarelo.disabled = false;
+    botaoAzul.disabled = false;
+}
+
 function jogarNovamente() {
     painelJogo.addEventListener('click', reiniciaGenius);
 }
@@ -140,6 +154,7 @@ function calcularChances(e) {
     if (clique === 'repetir' && vezes > 0) {
         resetSequencias(resultJogador);
         painelAtencao();
+        desabilitarBotoes();
         acenderLuzes();
         atualizaChances();
         setTimeout(function() {
@@ -152,6 +167,7 @@ function calcularChances(e) {
             } else if (vezes === 0) {
                 turno.innerText = 'Você não pode mais repetir a sequência.';
             };
+            habilitarBotoes();
         }, (resultGenius.length + 1) * 1000);
     }
 };
@@ -159,6 +175,7 @@ function calcularChances(e) {
 function genius(){
     pontosAtualPagina.innerText = nivel
     painelAtencao();
+    desabilitarBotoes();
     sortearCor(resultGenius);
     acenderLuzes();
     
@@ -166,6 +183,7 @@ function genius(){
         painelSuaVez();
         const turno = document.getElementById('chances');
         turno.innerText = `Você ainda pode repetir ${vezes} vezes.`;
+        habilitarBotoes();
     }, (resultGenius.length + 1) * 1000);
 
     painelJogo.addEventListener('click', calcularChances);
