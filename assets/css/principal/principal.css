@@ -133,6 +133,37 @@
     font-weight: bold;
 }
 
+#repetir {
+    width: 10rem;
+    height: 2rem;
+    background-color: #999;
+    color: #fff;
+    border-radius: 1.5rem;
+    transition: background-color 2s;
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+#repetir:hover {
+    background-color: #3b3b3b;
+    transition: background-color 5s;
+}
+
+#repetir:active {
+    width: 9.5rem;
+    height: 1.8rem;
+    font-size: 9pt;
+}
+
+#chances {
+    margin: 1rem 0.5rem 0;
+    font-weight: bold;
+    font-size: 10pt;
+    text-align: center;
+}
+
 .acertou {
     font-size: 30pt;
     font-weight: bold;

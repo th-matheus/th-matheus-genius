@@ -5,13 +5,14 @@ const botaoAmarelo = document.getElementById('amarelo');
 const botaoAzul = document.getElementById('azul');
 const botaoJogarPainel = document.getElementById('botao-jogar');
 const recordePagina = document.getElementById('recorde');
-const PontosAtualPagina = document.getElementById('pontuacao-atual');
+const pontosAtualPagina = document.getElementById('pontuacao-atual');
 
 
 const resultGenius = [];
 const resultJogador = [];
 let nivel = 0;
 let recordeRAM = 0;
+let vezes = 3;
 
 function resetSequencias(arr) {
     arr.splice(0, arr.length);
@@ -74,6 +75,7 @@ function reiniciaGenius(evento) {
         resetSequencias(resultGenius);
         resetSequencias(resultJogador);
         nivel = 0;
+        vezes = 3;
         genius();
     } else if (click === 'reset') {
         location.reload();
@@ -85,7 +87,6 @@ function jogarNovamente() {
 }
 
 function recebeComparaSequenciaJogador(evento) {
-    console.log(resultJogador);
     resultJogador.push(evento.target.id);
 
     if (resultJogador.length === resultGenius.length) {
@@ -101,7 +102,7 @@ function recebeComparaSequenciaJogador(evento) {
             }, 1000);
         } else {
             if (nivel > recordeRAM) {
-                recordeRAM = nivel
+                recordeRAM = nivel;
                 recordePagina.innerText = recordeRAM;
             }
             painelErrou();
@@ -111,18 +112,63 @@ function recebeComparaSequenciaJogador(evento) {
             atualizaPontosRecorde();
         };
     };
+
+    resultJogador.forEach((element, index) => {
+        if (element !== resultGenius[index]) {
+            if (nivel > recordeRAM) {
+                recordeRAM = nivel;
+                recordePagina.innerText = recordeRAM;
+            }
+            painelErrou();
+            resetSequencias(resultJogador);
+            resetSequencias(resultGenius);
+            jogarNovamente();
+            atualizaPontosRecorde();
+        };
+    });
 }
 
+function atualizaChances() {
+    if (vezes > 0) {
+        vezes--;
+    };
+};
+
+function calcularChances(e) {
+    let clique = e.target.id
+
+    if (clique === 'repetir' && vezes > 0) {
+        resetSequencias(resultJogador);
+        painelAtencao();
+        acenderLuzes();
+        atualizaChances();
+        setTimeout(function() {
+            painelSuaVez();
+            const turno = document.getElementById('chances');
+            if (vezes === 1) {
+                turno.innerText = `Você ainda pode repetir ${vezes} vez.`;
+            } else if (vezes > 1) {
+                turno.innerText = `Você ainda pode repetir ${vezes} vezes.`;
+            } else if (vezes === 0) {
+                turno.innerText = 'Você não pode mais repetir a sequência.';
+            };
+        }, (resultGenius.length + 1) * 1000);
+    }
+};
+
 function genius(){
-    PontosAtualPagina.innerText = nivel
+    pontosAtualPagina.innerText = nivel
     painelAtencao();
     sortearCor(resultGenius);
     acenderLuzes();
     
     setTimeout(function() {
         painelSuaVez();
+        const turno = document.getElementById('chances');
+        turno.innerText = `Você ainda pode repetir ${vezes} vezes.`;
     }, (resultGenius.length + 1) * 1000);
 
+    painelJogo.addEventListener('click', calcularChances);
     containerBotoes.addEventListener('click', recebeComparaSequenciaJogador);
 }
 

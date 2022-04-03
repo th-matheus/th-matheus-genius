@@ -1,24 +1,46 @@
 const painelJogo = document.getElementById('bloco-centro-genius');
 
 function painelAtencao() {
+    painelJogo.innerHTML ='';
     painelJogo.style.backgroundColor = '#ffe478';
-    painelJogo.innerHTML = `
-    <h2 class="atencao">ATENÇÃO!</h2>
-    `;
+
+    const atencao = document.createElement('h2');
+
+    atencao.classList.add('acertou');
+    atencao.innerText = 'ATENÇÃO!';
+
+    painelJogo.appendChild(atencao);
 };
 
 function painelSuaVez() {
+    painelJogo.innerHTML ='';
     painelJogo.style.backgroundColor = '#fff';
-    painelJogo.innerHTML = `
-    <h2 class="sua-vez">SUA VEZ</h2>
-    `;
+
+    const suaVez = document.createElement('h2');
+    const repetir = document.createElement('button');
+    const chances = document.createElement('p');
+
+    suaVez.classList.add('sua-vez');
+    suaVez.innerText = 'SUA VEZ';
+    repetir.id = 'repetir';
+    repetir.innerText = 'repetir sequência';
+    chances.id = 'chances';
+
+    painelJogo.appendChild(suaVez);
+    painelJogo.appendChild(repetir);
+    painelJogo.appendChild(chances);
 };
 
 function painelAcertou() {
+    painelJogo.innerHTML ='';
     painelJogo.style.backgroundColor = '#59ab59';
-    painelJogo.innerHTML = `
-    <h2 class="acertou">ACERTOU!</h2>
-    `;
+
+    const acertou = document.createElement('h2');
+
+    acertou.classList.add('acertou');
+    acertou.innerText = 'ACERTOU!';
+
+    painelJogo.appendChild(acertou);
 };
 
 function painelErrou() {

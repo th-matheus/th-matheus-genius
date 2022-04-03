@@ -1,15 +1,9 @@
 const blocoPlacar = document.createElement("aside");
-
 const blocoRecorde = document.createElement("section");
-
 const tituloRecorde = document.createElement("h2");
-
 const fundoRecorde = document.createElement("div");
-
 const recorde = document.createElement("p");
-
 const tituloPontuacaoAtual = document.createElement("h2");
-
 const fundoPontuacaoAtual = document.createElement("div");
 const PontuacaoAtual = document.createElement("p");
 const blocoInformacoes = document.createElement("section");
