@@ -2,7 +2,7 @@ const blocoPlacar = document.createElement("aside");
 const blocoRecorde = document.createElement("section");
 const tituloRecorde = document.createElement("h2");
 const fundoRecorde = document.createElement("div");
-const recorde = document.createElement("p");
+const recordePlacar = document.createElement("p");
 const tituloPontuacaoAtual = document.createElement("h2");
 const fundoPontuacaoAtual = document.createElement("div");
 const PontuacaoAtual = document.createElement("p");
@@ -25,8 +25,8 @@ tituloRecorde.innerText = "Recorde:";
 
 fundoRecorde.id = "fundo-recorde";
 
-recorde.id = "recorde";
-recorde.innerText = "0";
+recordePlacar.id = "recorde";
+recordePlacar.innerText = "0";
 
 tituloPontuacaoAtual.classList.add("titulo-pontuacao-atual");
 tituloPontuacaoAtual.innerText = "Pontos:";
@@ -67,7 +67,7 @@ main.appendChild(blocoPlacar);
 blocoPlacar.appendChild(blocoRecorde);
 blocoRecorde.appendChild(tituloRecorde);
 blocoRecorde.appendChild(fundoRecorde);
-fundoRecorde.appendChild(recorde);
+fundoRecorde.appendChild(recordePlacar);
 blocoRecorde.appendChild(tituloPontuacaoAtual);
 blocoRecorde.appendChild(fundoPontuacaoAtual);
 fundoPontuacaoAtual.appendChild(PontuacaoAtual);
@@ -79,5 +79,3 @@ containerImgMatheus.appendChild(githubMatheus);
 githubMatheus.appendChild(imgGithubMatheus);
 containerImgMatheus.appendChild(linkedinMatheus);
 linkedinMatheus.appendChild(imgLinkedinMatheus);
-blocoInformacoes.appendChild(nomeDevHerbert);
-blocoInformacoes.appendChild(containerImgHerbert);
