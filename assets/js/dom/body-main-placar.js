@@ -39,7 +39,7 @@ PontuacaoAtual.innerText = "0";
 blocoInformacoes.id = "bloco-informacoes";
 
 feitoPor.id = "feito-por";
-feitoPor.innerText = "Develop By:";
+feitoPor.innerText = "Desenvolvido por:";
 
 nomeDevMatheus.classList.add("nome-dev");
 nomeDevMatheus.classList.add("matheus");
